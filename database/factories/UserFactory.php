@@ -24,7 +24,12 @@ class UserFactory extends Factory
             "avatar" =>
                 "https://i.pravatar.cc/150?img=" .
                 $this->faker->numberBetween(1, 70),
+            "profile" => $this->faker->sentence(14),
+            "location" => $this->faker->city() . ", " . $this->faker->country(),
+            "link" => "https://laracasts.com",
+            "linkText" => collect(["laracasts.com", "laravel.com"])->random(),
             "remember_token" => Str::random(10),
+            "created_at" => $this->faker->dateTimeBetween("-5 years", now()),
         ];
     }
 
