@@ -54,3 +54,7 @@ Route::get("/users/{user}", function (User $user) {
         "created_at"
     );
 });
+
+Route::get("/users/{user}/tweets", function (User $user) {
+    return $user->tweets()->paginate(10);
+});
