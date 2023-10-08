@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
                 ->default(
                     "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp"
                 );
-            $table->text("profile")->nullable();
+            $table->text("intro")->nullable();
             $table->string("location")->nullable();
             $table->string("link")->nullable();
             $table->string("linkText")->nullable();
